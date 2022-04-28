@@ -1,0 +1,426 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  --primary-color: #b53400;
+  --secondary-color: #dfeef8;
+  --color-light: #092233;
+  --color-light-2: #f17540;
+  --dark-nav-bg: url(/assets/img/nav-bg-light.png);
+  --dark-hero-bg: url("../img/hero-bg-light.png") top center;
+}
+
+.light-theme {
+  --primary-color: #b53400;
+  --secondary-color: #092233;
+  --color-light: #fff;
+  --color-light-2: #ffe2d6;
+  --dark-nav-bg: url(../img/nav-bg.png);
+  --dark-hero-bg: url("../img/hero-bg.jpg") top center;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+.color-1 {
+  color: var(--color-light);
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: var(--color-light);
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: var(--primary-color);
+  color: var(--color-light);
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: var(--dark-nav-bg);
+  background-size: cover;
+  overflow-y: auto;
+}
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+}
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Lato", sans-serif;
+}
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: var(--color-light);
+  text-decoration: none;
+}
+#header .profile .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: var(--color-light);
+  line-height: 1;
+  text-align: center;
+  transition: 0.3s;
+}
+#header .profile .social-links a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#main {
+  margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.nav-menu ul a {
+  display: inline-block;
+  font-size: 22px;
+}
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: var(--color-light);
+  padding: 0px 15px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  font-size: 15px;
+  display: inline-block;
+  font-size: 22px;
+  text-align: center;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a {
+  display: inline-block;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-light);
+  border-bottom: var(--primary-color) 3px solid;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: var(--primary-color);
+  color: var(--color-light);
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+.mobile-nav-active #header {
+  left: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: var(--dark-hero-bg);
+  background-size: cover;
+}
+
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--color-light);
+}
+#hero p {
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+#hero p span {
+  color: var(--primary-color);
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid var(--primary-color);
+}
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: var(--color-light);
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-color);
+  bottom: 0;
+  left: 0;
+}
+.section-title p {
+  margin-bottom: 0;
+  color: var(--color-light);
+  margin-left: 20px;
+  padding-bottom: 15px;
+}
+.text-darknes {
+  color: var(--primary-color) !important;
+}
+
+/*--------------------------------------------------------------
+# who-am-i
+--------------------------------------------------------------*/
+.who-am-i {
+  padding-bottom: 30px;
+  background-color: var(--secondary-color);
+}
+.who-am-i img {
+  width: 100%;
+  height: auto;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+  padding-bottom: 130px;
+  background-color: var(--secondary-color);
+}
+.contact .info {
+  padding: 30px;
+  background: var(--secondary-color);
+  width: 100%;
+  border: var(--primary-color) 1px solid;
+}
+.contact .info i {
+  font-size: 20px;
+  color: var(--primary-color);
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: var(--color-light-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--color-light);
+}
+.contact .info .email p {
+  padding-top: 5px;
+}
+.contact .info .email a,
+.contact .info .phone a {
+  color: var(--color-light-2);
+}
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: var(--primary-color);
+  color: var(--color-light);
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  padding: 15px;
+  color: var(--color-light);
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+}
+#footer .copyright {
+  text-align: center;
+}
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-light);
+}
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
+
+#icon {
+  width: 30px !important;
+  cursor: pointer;
+}
+
+.full-height {
+  height: 100vh !important;
+}
