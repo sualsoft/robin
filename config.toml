@@ -1,3 +1,44 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Geländespiel'
+
+[menu]
+[[menu.nav]]
+  identifier = 'Fulvia'
+  name = 'Fulvia'
+  title = 'Fulvia'
+  url = '/fulvia/'
+  pageref = '/fulvia/'
+  weight = 0
+
+[[menu.nav]]
+  identifier = 'Enobaria'
+  name = 'Enobaria'
+  title = 'Enobaria'
+  url = '/enobaria/'
+  pageref = '/enobaria/'
+  weight = 1
+
+[[menu.nav]]
+  identifier = 'Kapitol'
+  name = 'Kapitol'
+  title = 'Kapitol'
+  url = '/kapitol/'
+  pageref = '/kapitol/'
+  weight = 2
+
+[[menu.nav]]
+  identifier = 'Portia'
+  name = 'Portia'
+  title = 'Portia'
+  pageref = '/portia/'
+  url = '/portia/'
+  weight = 3
+
+[[menu.nav]]
+  identifier = 'Venia'
+  name = 'Venia'
+  title = 'Venia'
+  pageref = '/venia/'
+  url = '/venia/'
+  weight = 3

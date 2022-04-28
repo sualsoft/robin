@@ -2,28 +2,18 @@
 # General
 --------------------------------------------------------------*/
 :root {
-  --primary-color: #b53400;
-  --secondary-color: #dfeef8;
-  --color-light: #092233;
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --third-color: #e1b65f;
   --color-light-2: #f17540;
-  --dark-nav-bg: url(/assets/img/nav-bg-light.png);
-  --dark-hero-bg: url("../img/hero-bg-light.png") top center;
 }
 
-.light-theme {
-  --primary-color: #b53400;
-  --secondary-color: #092233;
-  --color-light: #fff;
-  --color-light-2: #ffe2d6;
-  --dark-nav-bg: url(../img/nav-bg.png);
-  --dark-hero-bg: url("../img/hero-bg.jpg") top center;
-}
 body {
   font-family: "Lato", sans-serif;
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--third-color);
   text-decoration: none;
 }
 
@@ -38,6 +28,26 @@ h6 {
 .color-1 {
   color: var(--color-light);
 }
+
+.btn a {
+  color: red;
+  padding: 10px 20px;
+  border: red 1px solid;
+  border-radius: 50px;
+}
+.btn a i {
+  color: red;
+  padding: 0px 10px;
+}
+.btn a:hover {
+  color: var(--third-color);
+  padding: 10px 20px;
+  border: var(--third-color) 1px solid;
+  border-radius: 50px;
+}
+.btn a:hover i {
+  color: var(--third-color);
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -48,7 +58,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: var(--primary-color);
+  background: var(--third-color);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -56,12 +66,15 @@ h6 {
 }
 .back-to-top i {
   font-size: 28px;
-  color: var(--color-light);
+  color: var(--primary-color);
   line-height: 0;
 }
 .back-to-top:hover {
-  background: var(--primary-color);
-  color: var(--color-light);
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.back-to-top:hover i {
+  color: var(--third-color);
 }
 .back-to-top.active {
   visibility: visible;
@@ -81,7 +94,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: var(--dark-nav-bg);
+  background: #3f3f3f;
   background-size: cover;
   overflow-y: auto;
 }
@@ -89,32 +102,6 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-}
-#header .profile h1 {
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  -moz-text-align-last: center;
-  text-align-last: center;
-  font-family: "Lato", sans-serif;
-}
-#header .profile h1 a,
-#header .profile h1 a:hover {
-  color: var(--color-light);
-  text-decoration: none;
-}
-#header .profile .social-links a {
-  font-size: 24px;
-  display: inline-block;
-  color: var(--color-light);
-  line-height: 1;
-  text-align: center;
-  transition: 0.3s;
-}
-#header .profile .social-links a:hover {
-  color: var(--primary-color);
-  text-decoration: none;
 }
 
 #main {
@@ -163,7 +150,7 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: var(--color-light);
+  color: var(--secondary-color);
   padding: 0px 15px;
   margin-bottom: 20px;
   transition: 0.3s;
@@ -181,8 +168,8 @@ h6 {
   font-size: 22px;
   text-align: center;
   text-decoration: none;
-  color: var(--color-light);
-  border-bottom: var(--primary-color) 3px solid;
+  color: var(--third-color);
+  border-bottom: var(--third-color) 3px solid;
 }
 
 /* Mobile Navigation */
@@ -220,22 +207,15 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: var(--dark-hero-bg);
+  background: var(--primary-color);
   background-size: cover;
 }
 
-#hero .hero-container {
-  position: relative;
+#hero .hero-container img {
   z-index: 2;
-  min-width: 300px;
+  margin-left: 300px;
 }
-#hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 56px;
-  color: var(--color-light);
-}
+
 #hero p {
   color: var(--primary-color);
   margin-bottom: 50px;
@@ -243,12 +223,7 @@ h6 {
   font-family: "Lato", sans-serif;
   font-weight: bold;
 }
-#hero p span {
-  color: var(--primary-color);
-  padding-bottom: 4px;
-  letter-spacing: 1px;
-  border-bottom: 3px solid var(--primary-color);
-}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -281,9 +256,10 @@ section {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
+  margin-left: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: var(--color-light);
+  color: var(--secondary-color);
 }
 .section-title h2::after {
   content: "";
@@ -310,11 +286,67 @@ section {
 --------------------------------------------------------------*/
 .who-am-i {
   padding-bottom: 30px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 .who-am-i img {
   width: 100%;
   height: auto;
+}
+
+.fulvia {
+  background-image: url(/assets/img/bg-fulvia.png);
+  min-height: 100vh;
+  padding-bottom: 30px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.fulvia ol {
+  margin-left: 20px;
+}
+.fulvia h2 {
+  color: red;
+}
+.enobaria h2 {
+  color: #c500ff;
+}
+.portia h2 {
+  color: #fff;
+}
+
+.enobaria {
+  background-image: url(/assets/img/bg-enobaria.png);
+}
+.portia {
+  background-image: url(/assets/img/bg-portia.png);
+}
+
+.mentor {
+  background-color: var(--primary-color);
+  padding: 75px;
+}
+.mentor .card {
+  background-color: var(--primary-color);
+}
+.mentor img {
+  width: 70%;
+}
+
+.mentor .card-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.fulvia-mentor .card-title {
+  color: red;
+}
+.enobaria-mentor .card-title {
+  color: #c500ff;
+}
+
+.portia-mentor .card-title {
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -391,7 +423,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   padding: 15px;
-  color: var(--color-light);
+  color: var(--secondary-color);
   font-size: 14px;
   position: fixed;
   left: 0;

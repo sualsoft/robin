@@ -5,50 +5,19 @@
 <header id="header">
   <div class="d-flex flex-column">
     <div class="profile">
-      <img
-        src="/assets/img/profile-img.png"
-        alt=""
-        class="img-fluid rounded-circle"
-      />
-      <h1>
-        <a href="/" class="text-darknes text-center">Benjamin Bachmann</a>
-      </h1>
-      <p class="text-center color-1">Ich opfere trojanische Pferde</p>
-      <div class="social-links mt-3 text-center">
-        <a href="https://www.linkedin.com/in/benbachmann/" class="linkedin"
-          ><i class="bx bxl-linkedin-square"></i
-        ></a>
-      </div>
-      <div class="theme-change">
-        <img src="/assets/img/moon.png" id="icon" />
-      </div>
+      <a href="/"><img src="/assets/img/logo.png" alt="" class="img-fluid rounded-circle" /></a>
     </div>
 
     <nav id="navbar" class="nav-menu navbar text-center">
+      {{ $currentPage := . }}
       <ul>
+        {{ range .Site.Menus.nav }}
         <li>
-          <a href="#hero" class="nav-link scrollto active">
-            <span>Home</span></a
+          <a href="{{ .URL }}" class="nav-link scrollto {{ if $currentPage.IsMenuCurrent "nav" . }}active{{ end }} ">
+            <span>{{ .Name }}</span></a
           >
         </li>
-        <li>
-          <a href="#who-am-i" class="nav-link scrollto">
-            <span>Über mich</span></a
-          >
-        </li>
-        <li>
-          <a href="#what-do-i-do" class="nav-link scrollto">
-            <span>Meine Leistungen</span></a
-          >
-        </li>
-        <li>
-          <a href="#contact" class="nav-link scrollto"> <span>Kontakt</span></a>
-        </li>
-        <li>
-          <a href="/imprint" class="nav-link scrollto">
-            <span>Impressum</span></a
-          >
-        </li>
+        {{end}}
       </ul>
     </nav>
     <!-- .nav-menu -->
