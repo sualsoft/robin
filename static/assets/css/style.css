@@ -314,12 +314,26 @@ section {
 .portia h2 {
   color: #fff;
 }
+.venia h2 {
+  color: #00aaff;
+}
 
 .enobaria {
   background-image: url(/assets/img/bg-enobaria.png);
 }
 .portia {
   background-image: url(/assets/img/bg-portia.png);
+}
+.venia {
+  background-image: url(/assets/img/bg-venia.png);
+}
+.kapitol {
+  background: #000;
+  margin-bottom: -130px;
+  color: var(--secondary-color);
+}
+.kapitol h2 {
+  color: #e1b65f;
 }
 
 .mentor {
@@ -329,26 +343,66 @@ section {
 .mentor .card {
   background-color: var(--primary-color);
 }
-.mentor img {
-  width: 70%;
+
+.mentor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: red 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+}
+.mentor-card h5 {
+  color: #fff;
 }
 
 .mentor .card-title {
   font-weight: 400;
   font-size: 18px;
 }
-
+.fulvia-mentor {
+  background-image: url(/assets/img/bg-fulvia.png);
+}
 .fulvia-mentor .card-title {
   color: red;
+}
+
+.enobaria-mentor {
+  background-image: url(/assets/img/bg-enobaria.png);
+}
+.portia-mentor {
+  background-image: url(/assets/img/bg-portia.png);
+}
+.portia-mentor .mentor-card {
+  border: #fff 1px solid;
 }
 .enobaria-mentor .card-title {
   color: #c500ff;
 }
-
+.enobaria-mentor .mentor-card {
+  border: #c500ff 1px solid;
+}
 .portia-mentor .card-title {
   color: #fff;
 }
 
+.venia-mentor .card-title {
+  color: #00aaff;
+}
+.venia-mentor .mentor-card {
+  border: #00aaff 1px solid;
+}
+.venia-mentor {
+  background-image: url(/assets/img/bg-venia.png);
+}
+
+.kapitol-mentor .mentor-card {
+  border: #e1b65f 1px solid;
+}
+.kapitol-mentor h5 {
+  color: #e1b65f;
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
