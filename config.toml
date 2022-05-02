@@ -9,7 +9,7 @@ title = 'Geländespiel'
   title = 'Fulvia'
   url = '/fulvia/'
   pageref = '/fulvia/'
-  weight = 0
+  weight = 2
 
 [[menu.nav]]
   identifier = 'Enobaria'
@@ -17,7 +17,7 @@ title = 'Geländespiel'
   title = 'Enobaria'
   url = '/enobaria/'
   pageref = '/enobaria/'
-  weight = 1
+  weight = 3
 
 [[menu.nav]]
   identifier = 'Kapitol'
@@ -25,7 +25,7 @@ title = 'Geländespiel'
   title = 'Kapitol'
   url = '/kapitol/'
   pageref = '/kapitol/'
-  weight = 2
+  weight = 1
 
 [[menu.nav]]
   identifier = 'Portia'
@@ -33,7 +33,7 @@ title = 'Geländespiel'
   title = 'Portia'
   pageref = '/portia/'
   url = '/portia/'
-  weight = 3
+  weight = 4
 
 [[menu.nav]]
   identifier = 'Venia'
@@ -41,4 +41,4 @@ title = 'Geländespiel'
   title = 'Venia'
   pageref = '/venia/'
   url = '/venia/'
-  weight = 3
+  weight = 5
